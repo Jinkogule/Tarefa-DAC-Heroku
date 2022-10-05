@@ -18,6 +18,7 @@ public class MessageBean implements Serializable {
      
     private String aut;
     private String lang;
+    private String time;
     private String msg;
     private String msg2;
     private String msg3;
