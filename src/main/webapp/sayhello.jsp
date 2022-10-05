@@ -11,6 +11,8 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>SayHello.jsp</title>
+
+        <%@ include file="bootstrap.html" %>
     </head>
     <body>
         <!--Cabeçalho-->
