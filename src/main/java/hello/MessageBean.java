@@ -65,7 +65,43 @@ public class MessageBean implements Serializable {
         return "";
     }
     public String getMsg3() {
-
+        switch (this.time){
+            case "dia":
+                switch (this.lang){
+                    case "pt":
+                        return "Bom dia!";
+                    case "en":
+                        return "Good morning!";
+                    case "de":
+                        return "Guten Tag!";
+                    case "fr":
+                        return "Bonjour!";
+                }
+            case "tarde":
+                switch (this.lang){
+                    case "pt":
+                        return "Boa tarde!";
+                    case "en":
+                        return "Good afternoon!";
+                    case "de":
+                        return "Guten Nachmittag!";
+                    case "fr":
+                        return "Bon après-midi!";
+                }
+            case "noite":
+                switch (this.lang){
+                    case "pt":
+                        return "Boa noite!";
+                    case "en":
+                        return "Good evening!";
+                    case "de":
+                        return "Guten Abend!";
+                    case "fr":
+                        return "Bonsoir!";
+                }
+        }
+        return "erro";
+        /*
         //dia
         if (this.lang == "pt" && this.time == "dia"){
             return "Bom dia!";
@@ -111,7 +147,7 @@ public class MessageBean implements Serializable {
         else{
             return "erro";
         }
-        
+        */
         
     }
 }
