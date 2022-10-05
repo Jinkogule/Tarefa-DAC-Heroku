@@ -20,17 +20,23 @@ public class MessageBean implements Serializable {
     private String lang;
     private String msg;
     private String msg2;
+    private String msg3;
         
     public MessageBean() {
     }
     
     public String getAut() {
-        return "José Viterbo";
+        return "Lucas Pimenta";
     }
     
     public void setLang(String value) {
         lang = value;
     }
+
+    public void setTime(String value) {
+        time = value;
+    }
+    
     public String getMsg() {
         switch (this.lang){
             case "pt":
@@ -56,5 +62,53 @@ public class MessageBean implements Serializable {
                 return "Créé par";
         }
         return "";
+    }
+    public String getMsg3() {
+        //dia
+        if (this.lang == "pt" && this.time == "dia"){
+            return "Bom dia!"
+        }
+        else if (this.lang == "en" && this.time == "dia"){
+            return "Good morning!"
+        }
+        else if (this.lang == "de" && this.time == "dia"){
+            return "Guten Tag!"
+        }
+        else if (this.lang == "fr" && this.time == "dia"){
+            return "Bonjour!"
+        }
+
+        //tarde
+        else if (this.lang == "pt" && this.time == "tarde"){
+            return "Boa tarde!"
+        }
+        else if (this.lang == "en" && this.time == "tarde"){
+            return "Good afternoon!"
+        }
+        else if (this.lang == "de" && this.time == "tarde"){
+            return "Guten Nachmittag!"
+        }
+        else if (this.lang == "fr" && this.time == "tarde"){
+            return "Bon après-midi!"
+        }
+
+        //noite
+        else if (this.lang == "pt" && this.time == "noite"){
+            return "Boa noite!"
+        }
+        else if (this.lang == "en" && this.time == "noite"){
+            return "Good evening!"
+        }
+        else if (this.lang == "de" && this.time == "noite"){
+            return "Guten Abend!"
+        }
+        else if (this.lang == "fr" && this.time == "noite"){
+            return "Bonsoir!"
+        }
+
+        else{
+            return "";
+        }
+        
     }
 }

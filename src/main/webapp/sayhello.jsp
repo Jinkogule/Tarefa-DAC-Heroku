@@ -16,8 +16,10 @@
         <jsp:useBean id="myBean" class="hello.MessageBean"/>
         <h1>Aplicativo HelloWorld</h1>
         <% String lang = request.getParameter("lang"); %>
+        <% String time = request.getParameter("time"); %>
         <h2><jsp:setProperty name="myBean" property="lang" value="<%=lang%>"/>
-        <jsp:getProperty name="myBean" property="msg"/>, <%=request.getParameter("nome")%>!</h2>
+        <jsp:getProperty name="myBean" property="msg"/>, <%=request.getParameter("nome")%>!<jsp:setProperty name="myBean" property="time" value="<%=time%>"/>
+        <jsp:getProperty name="myBean" property="msg3"/></h2>
         <jsp:getProperty name="myBean" property="msg2"/> <jsp:getProperty name="myBean" property="aut"/>
     </body>
 </html>
