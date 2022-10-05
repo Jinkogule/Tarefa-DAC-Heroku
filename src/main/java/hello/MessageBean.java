@@ -108,7 +108,7 @@ public class MessageBean implements Serializable {
         }
 
         else{
-            return "";
+            return "erro";
         }
         
     }
