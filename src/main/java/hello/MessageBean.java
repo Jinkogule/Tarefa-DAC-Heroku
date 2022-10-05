@@ -65,6 +65,18 @@ public class MessageBean implements Serializable {
         return "";
     }
     public String getMsg3() {
+        switch (this.time){
+            case "dia":
+                return "Bom dia";
+            case "en":
+                return "Good morning";
+            case "de":
+                return "Guten Tag";
+            case "fr":
+                return "Bonjour";
+        }
+        return "erro";
+        /*
         //dia
         if (this.lang == "pt" && this.time == "dia"){
             return "Bom dia!";
@@ -110,6 +122,7 @@ public class MessageBean implements Serializable {
         else{
             return "erro";
         }
+        */
         
     }
 }
